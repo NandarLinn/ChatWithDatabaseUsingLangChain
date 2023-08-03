@@ -74,7 +74,7 @@ curl -X 'POST' \
 ![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/3.png)
 
 ### Background Process in API
-![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/3.png)
+![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/4.png)
 
 
 
