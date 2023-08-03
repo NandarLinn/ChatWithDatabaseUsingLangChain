@@ -1,4 +1,4 @@
-# Chat With Dabase Using LandChain
+# Chat With Dabase Using LangChain
 
 ### Install the dependencies
 - Create a new virtual environment
