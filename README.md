@@ -46,7 +46,7 @@ def convert_prompt_to_query(prompt):
     result = db_chain.run(prompt)
     return result
 ```
-Please refer to the code in the [ask.py](https://github.com/NandarLinn/Testwork/blob/main/apis/v1/ask.py) and [prompt_to_query.py](https://github.com/NandarLinn/Testwork/blob/main/modules/prompt_to_query.py) file for further details and implementation.
+Please refer to the code in the [ask.py](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/apis/v1/ask.py) and [prompt_to_query.py](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/modules/prompt_to_query.py) file for further details and implementation.
 
 ### Run Demo App
 To execute the API, please use the following command:
@@ -58,8 +58,8 @@ Try it out in browser
 ```sh
 http://127.0.0.1:8000/docs
 ```
-![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
-![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/1.png)
+![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/2.png)
 
 Or using curl
 ```sh
@@ -71,10 +71,10 @@ curl -X 'POST' \
   "question": "how much was earned in 2019"
 }'
 ```
-![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/3.png)
 
 ### Background Process in API
-![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+![Alt](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/blob/main/pictures/3.png)
 
 
 
