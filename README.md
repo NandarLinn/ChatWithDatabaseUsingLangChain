@@ -11,27 +11,27 @@ source testwork_env/bin/activate
 pip install -r requirement.txt
 ```
 
-### Testwork Demo
+### Create SqliteDB
+- make a directory `database` in current directory.
 To execute the API, please use the following command:
 ```sh
 uvicorn app:app --reload
 ```
 - Upon executing the API, the database and corresponding tables were automatically created in `database/sql_app.db`. It is worth noting that an SQLite Database was utilized for this demonstration application.
 - First of all, the denormalized dataset needs to be normalized that helps eliminate data redundancy and improve data integrity in the database. It involves organizing data into tables and applying a set of rules called normal forms to ensure efficient and accurate data storage. After the process of normalization, a total of four tables are obtained.
-    - Customers
+    - Orders
     - Products
-    - SaleItems
-    - Sales
-- To review the table schema, kindly refer to the [Model](https://github.com/NandarLinn/Testwork/tree/main/models) folder.
+- To review the table schema, kindly refer to the [Model](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/tree/main/models) folder.
  
 ### Importing CSV Data
 The first step involves mapping the CSV header to the respective column mapping. Following this, the sale data is read row by row, and the data is imported into specific tables using filter methods.
+Dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/knightbearr/sales-product-data).
 To import the CSV data, please execute the following command:
 ```sh
 python3 -m venv testwork_env
 source testwork_env/bin/activate
 cd Testwork
-python -m seeds.importer ~/Downloads/sales_data\ -\ sales_data.csv
+python -m seeds.importer ~/Downloads/sales_data\ -\ sales.csv
 ```
 
 ### Building A Chat Bot
@@ -48,7 +48,7 @@ def convert_prompt_to_query(prompt):
 ```
 Please refer to the code in the [ask.py](https://github.com/NandarLinn/Testwork/blob/main/apis/v1/ask.py) and [prompt_to_query.py](https://github.com/NandarLinn/Testwork/blob/main/modules/prompt_to_query.py) file for further details and implementation.
 
-### Test API
+### Run Demo App
 To execute the API, please use the following command:
 ```sh
 uvicorn app:app --reload
@@ -56,8 +56,9 @@ uvicorn app:app --reload
 Through the Fast API, it is possible to inquire about the sale data by posing questions.
 Try it out in browser
 ```sh
-http://127.0.0.1:8000
+http://127.0.0.1:8000/docs
 ```
+[]()
 Or using curl
 ```sh
 curl -X 'POST' \
@@ -65,7 +66,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "question": "show a top customer in 2005"
+  "question": "how much was earned in 2019"
 }'
 ```
 
