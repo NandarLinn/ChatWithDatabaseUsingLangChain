@@ -58,7 +58,9 @@ Try it out in browser
 ```sh
 http://127.0.0.1:8000/docs
 ```
-[]()
+![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+
 Or using curl
 ```sh
 curl -X 'POST' \
@@ -69,6 +71,10 @@ curl -X 'POST' \
   "question": "how much was earned in 2019"
 }'
 ```
+![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
+
+### Background Process in API
+![Alt](https://github.com/NandarLinn/Testwork/raw/main/pictures/Screen%20Shot%202023-07-12%20at%201.45.52%20PM.png)
 
 
 
