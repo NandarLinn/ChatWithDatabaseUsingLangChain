@@ -22,15 +22,22 @@ uvicorn app:app --reload
     - Orders
     - Products
 - To review the table schema, kindly refer to the [Model](https://github.com/NandarLinn/ChatWithDatabaseUsingLangChain/tree/main/models) folder.
+
+### Create evironment variables
+Create .env file in parent directory. Then place the API key and sqlitedb path. Create OpenAI API Key [here](https://platform.openai.com/account/api-keys). Free version has some limiting in qurey execution.
+```sh
+OPENAI_APIKEY="YOUR_OPEN_API_KEY"
+DB_URI="sqlite:////Users/linnaein/Projects/ChatWithDatabaseUsingLangChain/database/sql_app.db"
+```
  
 ### Importing CSV Data
 The first step involves mapping the CSV header to the respective column mapping. Following this, the sale data is read row by row, and the data is imported into specific tables using filter methods.
 Dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/knightbearr/sales-product-data).
 To import the CSV data, please execute the following command:
 ```sh
-python3 -m venv testwork_env
-source testwork_env/bin/activate
-cd Testwork
+python3 -m venv langchain_env
+source langchain_env/bin/activate
+cd ChatWithDatabaseUsingLangChain
 python -m seeds.importer ~/Downloads/sales_data\ -\ sales.csv
 ```
 
